@@ -71,7 +71,7 @@ else
                                 <select id="producttypeid"
                                         class="form-control"
                                         @bind=Product.ProductTypeId>
-                                        @foreach (var productType in lstProductType)
+                                    @foreach (var productType in lstProductType)
                                     {
                                         <option value="@productType.ProductTypeId">@productType.Name</option>
                                     }
@@ -79,8 +79,8 @@ else
                             </div>
                         </div>
                     </div>
-                   <div class="row">
-                       <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
                             <!--Stock-->
                             <div class="mb-3">
                                 <label for="stock"
@@ -95,8 +95,8 @@ else
                                        class="form-control"
                                        @bind="Product!.Stock" />
                             </div>
-                       </div>
-                       <div class="col-6">
+                        </div>
+                        <div class="col-6">
                             <!--Price-->
                             <div class="mb-3">
                                 <label for="price"
@@ -111,8 +111,8 @@ else
                                        class="form-control"
                                        @bind="Product!.Price" />
                             </div>
-                       </div>
-                   </div>
+                        </div>
+                    </div>
                     <!--Description-->
                     <div class="mb-3">
                         <label for="description"
@@ -120,13 +120,37 @@ else
                             Descripción
                         </label>
                         <textarea rows="10"
-                            class="form-control"
-                            @bind="Product!.Description"
-                            required
-                            id="description">
+                                  class="form-control"
+                                  @bind="Product!.Description"
+                                  required
+                                  id="description">
                         </textarea>
                     </div>
-                    
+                    <!--Image-->
+                    <div class="mb-3">
+                        <label for="image"
+                               class="input-group input-group-static">
+                            Imagen
+                        </label>
+                        <InputFile type="file"
+                               id="image"
+                               class="form-control"
+                               required
+                               OnChange="@UploadImage" />
+                        @{
+                            var ProgressCssForImage = "progress" + (DisplayProgressForImage ? "" : "d-none");
+                            var ProgressWidthStyleForImage = ProgressPercentForImage + "%";
+                        }
+                        <!--Progress bar-->
+                        <div class="@ProgressCssForImage">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated @ProgressBarColourForImage"
+                                 role="progressbar" style="width:@ProgressWidthStyleForImage"
+                                 area-valuenow="@ProgressPercentForImage" 
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
                     
                     <hr />
                     <button id="btn-submit" type="submit"
@@ -171,6 +195,14 @@ else
     public User User { get; set; } = new();
 
     public List<ProductType> lstProductType = [];
+
+    //Progress bar for Image
+    public bool DisplayProgressForImage { get; set; } = false;
+    public int ProgressPercentForImage { get; set; } = 0;
+    public string ProgressTextForImage { get; set; } = "";
+    public string ProgressBarColourForImage { get; set; } = "bg-info";
+    
+    
     #endregion
 
     protected override void OnInitialized()
@@ -305,6 +337,61 @@ else
             Message = $@"<div class=""alert alert-danger text-white font-weight-bold"" role=""alert"">
                                 Hubo un error. Intente nuevamente. Mensaje del error: {ex.Message}
                             </div>";
+        }
+        finally
+        {
+            //Re-render the page to show ScannedText
+            await InvokeAsync(() => StateHasChanged()).ConfigureAwait(false);
+        }
+    }
+
+    private async void UploadImage(InputFileChangeEventArgs e)
+    {
+
+        try
+        {
+            DisplayProgressForImage = true;
+            ProgressPercentForImage = 80;
+            ProgressBarColourForImage = "bg-info";
+
+            string path = Path.Combine(
+                Environment.CurrentDirectory,
+                "wwwroot",
+                "Uploads",
+                "MercaditoAli",
+                "Product",
+                e.File.Name);
+
+            long MaxFileSize = 1024L * 1024L; //3MB max.
+
+            await using FileStream FileStream = new(path, FileMode.Create);
+            await e.File.OpenReadStream(MaxFileSize).CopyToAsync(FileStream);
+
+            FileStream.Close();
+
+            string Limitator = "\\wwwroot";
+            int StartIndex = path.IndexOf(Limitator);
+            string Result = "";
+
+            if (StartIndex != -1)
+            {
+                Result = path.Substring(StartIndex + Limitator.Length);
+            }
+
+            Product!.Image = Result;
+
+            ProgressPercentForImage = 100;
+            ProgressBarColourForImage = "bg-success";
+            DisplayProgressForImage = false;
+        }
+        catch (Exception ex)
+        {
+            Message = $@"<div class=""alert alert-danger text-white font-weight-bold"" role=""alert"">
+                            Hubo un error. Intente nuevamente. Mensaje del error: {ex.Message}
+                         </div>";
+
+            ProgressPercentForImage = 100;
+            ProgressBarColourForImage = "bg-danger";
         }
         finally
         {

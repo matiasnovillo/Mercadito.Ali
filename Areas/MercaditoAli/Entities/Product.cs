@@ -60,6 +60,9 @@ namespace MercaditoAli.Areas.MercaditoAli.Entities
 
         [Library.ModelAttributeValidator.Key("ProductTypeId")]
         public int ProductTypeId { get; set; }
+
+        [Library.ModelAttributeValidator.String("Image", true, 1, 8000, "")]
+        public string? Image { get; set; }
     
         public string ToStringOnlyValuesForHTML()
         {
@@ -128,6 +131,12 @@ namespace MercaditoAli.Areas.MercaditoAli.Entities
         <div style=""height: 12px; line-height: 12px; font-size: 10px;"">&nbsp;</div>
         <font face=""'Source Sans Pro', sans-serif"" color=""#000000"" style=""font-size: 20px; line-height: 28px;"">
             <span style=""font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif; color: #000000; font-size: 20px; line-height: 28px;"">{ProductTypeId}</span>
+        </font>
+        <div style=""height: 40px; line-height: 40px; font-size: 38px;"">&nbsp;</div>
+    </td><td align=""left"" valign=""top"">
+        <div style=""height: 12px; line-height: 12px; font-size: 10px;"">&nbsp;</div>
+        <font face=""'Source Sans Pro', sans-serif"" color=""#000000"" style=""font-size: 20px; line-height: 28px;"">
+            <span style=""font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif; color: #000000; font-size: 20px; line-height: 28px;"">{Image}</span>
         </font>
         <div style=""height: 40px; line-height: 40px; font-size: 38px;"">&nbsp;</div>
     </td>

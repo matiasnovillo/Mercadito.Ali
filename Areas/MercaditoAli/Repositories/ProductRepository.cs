@@ -170,6 +170,7 @@ namespace MercaditoAli.Areas.MercaditoAli.Repositories
                 DataTable.Columns.Add("Stock", typeof(string));
                 DataTable.Columns.Add("Description", typeof(string));
                 DataTable.Columns.Add("ProductTypeId", typeof(string));
+                DataTable.Columns.Add("Image", typeof(string));
                 
 
                 foreach (Product product in lstProduct)
@@ -185,7 +186,8 @@ namespace MercaditoAli.Areas.MercaditoAli.Repositories
                         product.Price,
                         product.Stock,
                         product.Description,
-                        product.ProductTypeId
+                        product.ProductTypeId,
+                        product.Image
                         
                         );
                 }

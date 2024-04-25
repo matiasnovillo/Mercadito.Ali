@@ -143,6 +143,7 @@
                                 <th>Stock</th>
                                 <th>Descripción</th>
                                 <th>Tipo de producto</th>
+                                <th>Imagen</th>
                                 
                                 <th>Acciones</th>
                             </tr>
@@ -161,6 +162,14 @@
                                         <td>@paginatedProductDTO.lstProduct[i]?.Stock</td>
                                         <td>@paginatedProductDTO.lstProduct[i]?.Description</td>
                                         <td>@paginatedProductDTO.lstProductType[i]?.Name</td>
+                                        <td>
+                                            <a class="nav-link text-info"
+                                               href="@paginatedProductDTO.lstProduct[i]?.Image"
+                                               download>
+                                                <b class="fas fa-download"></b>
+                                                @paginatedProductDTO.lstProduct[i]?.Image
+                                            </a>
+                                        </td>
                                         
                                         <td>
                                             <div class="nav-item">
@@ -192,12 +201,19 @@
 
                             <div class="card shadow-lg mt-2">
                                 <div class="card-body">
-                                        <p><b>ID: </b>@paginatedProductDTO.lstProduct[i]?.ProductId</p>
-                                        <p><b>Nombre: </b>@paginatedProductDTO.lstProduct[i]?.Name</p>
-                                        <p><b>Precio: </b>@paginatedProductDTO.lstProduct[i]?.Price</p>
-                                        <p><b>Stock: </b>@paginatedProductDTO.lstProduct[i]?.Stock</p>
-                                        <div><b>Descripción: </b>@paginatedProductDTO.lstProduct[i]?.Description</div>
-                                        <p><b>Tipo de producto: </b>@paginatedProductDTO.lstProductType[i]?.Name</p>
+                                    <p><b>ID: </b>@paginatedProductDTO.lstProduct[i]?.ProductId</p>
+                                    <p><b>Nombre: </b>@paginatedProductDTO.lstProduct[i]?.Name</p>
+                                    <p><b>Precio: </b>@paginatedProductDTO.lstProduct[i]?.Price</p>
+                                    <p><b>Stock: </b>@paginatedProductDTO.lstProduct[i]?.Stock</p>
+                                    <div><b>Descripción: </b>@paginatedProductDTO.lstProduct[i]?.Description</div>
+                                    <p><b>Tipo de producto: </b>@paginatedProductDTO.lstProductType[i]?.Name</p>
+                                        <a class="nav-link text-info px-0"
+                                            href="@paginatedProductDTO.lstProduct[i]?.Image"
+                                            download>
+                                            <b>Image: </b>
+                                            <b class="fas fa-download"></b>
+                                            @paginatedProductDTO.lstProduct[i]?.Image
+                                        </a>
                                         
                                 </div>
                                 <div class="card-footer text-body-secondary">
@@ -601,6 +617,11 @@
             dtColumnProductTypeIdFordtProductCopy.ColumnName = "ProductTypeId";
             dtProductCopy.Columns.Add(dtColumnProductTypeIdFordtProductCopy);
 
+            DataColumn dtColumnImageFordtProductCopy = new DataColumn();
+            dtColumnImageFordtProductCopy.DataType = typeof(string);
+            dtColumnImageFordtProductCopy.ColumnName = "Image";
+            dtProductCopy.Columns.Add(dtColumnImageFordtProductCopy);
+
             
             #endregion
 
@@ -793,6 +814,11 @@
         </th><th align=""left"" valign=""top"" style=""border-width: 1px; border-style: solid; border-color: #e8e8e8; border-top: none; border-left: none; border-right: none;"">
             <font face=""'Source Sans Pro', sans-serif"" color=""#000000"" style=""font-size: 20px; line-height: 28px; font-weight: 600;"">
                 <span style=""font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif; color: #000000; font-size: 20px; line-height: 28px; font-weight: 600;"">ProductTypeId&nbsp;&nbsp;&nbsp;</span>
+            </font>
+            <div style=""height: 10px; line-height: 10px; font-size: 8px;"">&nbsp;</div>
+        </th><th align=""left"" valign=""top"" style=""border-width: 1px; border-style: solid; border-color: #e8e8e8; border-top: none; border-left: none; border-right: none;"">
+            <font face=""'Source Sans Pro', sans-serif"" color=""#000000"" style=""font-size: 20px; line-height: 28px; font-weight: 600;"">
+                <span style=""font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif; color: #000000; font-size: 20px; line-height: 28px; font-weight: 600;"">Image&nbsp;&nbsp;&nbsp;</span>
             </font>
             <div style=""height: 10px; line-height: 10px; font-size: 8px;"">&nbsp;</div>
         </th>

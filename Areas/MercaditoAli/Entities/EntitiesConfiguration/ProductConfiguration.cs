@@ -75,6 +75,11 @@ namespace MercaditoAli.Areas.MercaditoAli.Entities.EntitiesConfiguration
                     .HasColumnType("int")
                     .IsRequired(true);
 
+                //Image
+                entity.Property(e => e.Image)
+                    .HasColumnType("varchar(MAX)")
+                    .IsRequired(true);
+
                 
             }
             catch (Exception) { throw; }
