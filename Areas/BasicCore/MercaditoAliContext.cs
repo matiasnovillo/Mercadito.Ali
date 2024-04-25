@@ -21,6 +21,7 @@ namespace MercaditoAli.Areas.BasicCore
 
         //MercaditoAli
         public DbSet<Client> Client { get; set; }
+        public DbSet<ProductType> ProductType { get; set; }
 
         public MercaditoAliContext(IConfiguration configuration)
         {
@@ -69,6 +70,7 @@ namespace MercaditoAli.Areas.BasicCore
 
                 //MercaditoAli
                 modelBuilder.ApplyConfiguration(new ClientConfiguration());
+                modelBuilder.ApplyConfiguration(new ProductTypeConfiguration());
 
                 #region User
                 modelBuilder.Entity<User>().HasData(new User

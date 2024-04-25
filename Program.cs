@@ -36,6 +36,7 @@ builder.Services.AddScoped<ParameterRepository>();
 
 //Set access to repositories: MercaditoAli
 builder.Services.AddScoped<ClientRepository>();
+builder.Services.AddScoped<ProductTypeRepository>();
 
 //Set access to StateContainer to share data between Blazor components
 builder.Services.AddScoped<StateContainer>();
