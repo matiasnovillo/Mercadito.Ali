@@ -3,6 +3,8 @@ using MercaditoAli.Areas.CMSCore.Entities;
 using MercaditoAli.Areas.CMSCore.Entities.EntitiesConfiguration;
 using MercaditoAli.Areas.BasicCore.Entities.EntitiesConfiguration;
 using MercaditoAli.Areas.BasicCore.Entities;
+using MercaditoAli.Areas.MercaditoAli.Entities;
+using MercaditoAli.Areas.MercaditoAli.Entities.EntitiesConfiguration;
 
 namespace MercaditoAli.Areas.BasicCore
 {
@@ -18,6 +20,7 @@ namespace MercaditoAli.Areas.BasicCore
         public DbSet<Parameter> Parameter { get; set; }
 
         //MercaditoAli
+        public DbSet<Client> Client { get; set; }
 
         public MercaditoAliContext(IConfiguration configuration)
         {
@@ -65,6 +68,7 @@ namespace MercaditoAli.Areas.BasicCore
                 modelBuilder.ApplyConfiguration(new ParameterConfiguration());
 
                 //MercaditoAli
+                modelBuilder.ApplyConfiguration(new ClientConfiguration());
 
                 #region User
                 modelBuilder.Entity<User>().HasData(new User

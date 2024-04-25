@@ -3,6 +3,7 @@ using MercaditoAli.Areas.CMSCore.Repositories;
 using MercaditoAli.Components.Shared;
 using MercaditoAli.Components;
 using MercaditoAli.Areas.BasicCore;
+using MercaditoAli.Areas.MercaditoAli.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,7 @@ builder.Services.AddScoped<FailureRepository>();
 builder.Services.AddScoped<ParameterRepository>();
 
 //Set access to repositories: MercaditoAli
+builder.Services.AddScoped<ClientRepository>();
 
 //Set access to StateContainer to share data between Blazor components
 builder.Services.AddScoped<StateContainer>();
