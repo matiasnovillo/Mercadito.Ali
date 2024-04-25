@@ -1,4 +1,4 @@
-using Mercadito.Ali.Areas.CMSCore.Entities;
+using MercaditoAli.Areas.CMSCore.Entities;
 
 /*
  * GUID:e6c09dfe-3a3e-461b-b3f9-734aee05fc7b
@@ -11,7 +11,7 @@ using Mercadito.Ali.Areas.CMSCore.Entities;
  * 
  */
 
-namespace Mercadito.Ali.Areas.CMSCore.DTOs
+namespace MercaditoAli.Areas.CMSCore.DTOs
 {
     public class paginatedUserDTO
     {

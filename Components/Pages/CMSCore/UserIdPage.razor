@@ -1,21 +1,21 @@
 
 @page "/CMSCore/UserPage/{UserId:int}"
-@using Mercadito.Ali.Areas.CMSCore.Repositories;
+@using MercaditoAli.Areas.CMSCore.Repositories;
 @inject UserRepository userRepository;
 
 @if (UserId == 0)
 {
-    <PageTitle>Agregar usuario - Mercadito.Ali</PageTitle>
+    <PageTitle>Agregar usuario - MercaditoAli</PageTitle>
 }
 else
 {
-    <PageTitle>Editar usuario - Mercadito.Ali</PageTitle>
+    <PageTitle>Editar usuario - MercaditoAli</PageTitle>
 }
 
-<Mercadito.Ali.Components.Layout.NavBarVerticalDashboard lstFoldersAndPages="lstFoldersAndPages"></Mercadito.Ali.Components.Layout.NavBarVerticalDashboard>
+<MercaditoAli.Components.Layout.NavBarVerticalDashboard lstFoldersAndPages="lstFoldersAndPages"></MercaditoAli.Components.Layout.NavBarVerticalDashboard>
 
 <div class="main-content position-relative max-height-vh-100 h-100">
-    <Mercadito.Ali.Components.Layout.NavBarHorizontalDashboard></Mercadito.Ali.Components.Layout.NavBarHorizontalDashboard>
+    <MercaditoAli.Components.Layout.NavBarHorizontalDashboard></MercaditoAli.Components.Layout.NavBarHorizontalDashboard>
     <div class="container-fluid px-2 px-md-4">
         <div class="page-header min-height-300 border-radius-xl mt-4"
              style="background-image: url('assets/img/illustrations/Landscape2.jpg');">
@@ -112,7 +112,7 @@ else
         </div>
     </div>
 
-    <Mercadito.Ali.Components.Layout.FooterDashboard></Mercadito.Ali.Components.Layout.FooterDashboard>
+    <MercaditoAli.Components.Layout.FooterDashboard></MercaditoAli.Components.Layout.FooterDashboard>
 </div>
 
 @code {
@@ -220,7 +220,7 @@ else
                             </div>";
             }
 
-            User.Password = Mercadito.Ali.Library.Security.EncodeString(User.Password);
+            User.Password = MercaditoAli.Library.Security.EncodeString(User.Password);
 
             if (UserId == 0)
             {

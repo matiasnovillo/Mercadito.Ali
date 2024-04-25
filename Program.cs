@@ -1,8 +1,8 @@
-using Mercadito.Ali.Areas.BasicCore.Repositories;
-using Mercadito.Ali.Areas.CMSCore.Repositories;
-using Mercadito.Ali.Components.Shared;
-using Mercadito.Ali.Components;
-using Mercadito.Ali.Areas.BasicCore;
+using MercaditoAli.Areas.BasicCore.Repositories;
+using MercaditoAli.Areas.CMSCore.Repositories;
+using MercaditoAli.Components.Shared;
+using MercaditoAli.Components;
+using MercaditoAli.Areas.BasicCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,7 +33,7 @@ builder.Services.AddScoped<RoleMenuRepository>();
 builder.Services.AddScoped<FailureRepository>();
 builder.Services.AddScoped<ParameterRepository>();
 
-//Set access to repositories: Mercadito.Ali
+//Set access to repositories: MercaditoAli
 
 //Set access to StateContainer to share data between Blazor components
 builder.Services.AddScoped<StateContainer>();

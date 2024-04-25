@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Mercadito.Ali.Migrations
+namespace MercaditoAli.Migrations
 {
     /// <inheritdoc />
     public partial class CommonSPs : Migration

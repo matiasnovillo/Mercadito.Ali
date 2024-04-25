@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mercadito.Ali.Library.Structures
+namespace MercaditoAli.Library.Structures
 {
     /// <summary>
     /// Here there is no classes to make LinkedList objects <br/>

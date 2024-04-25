@@ -1,14 +1,14 @@
 
 @page "/BasicCore/FailurePage"
-@using Mercadito.Ali.Areas.BasicCore.Repositories;
+@using MercaditoAli.Areas.BasicCore.Repositories;
 @inject FailureRepository failureRepository;
 
-<PageTitle>Buscar fallas - Mercadito.Ali</PageTitle>
+<PageTitle>Buscar fallas - MercaditoAli</PageTitle>
 
-<Mercadito.Ali.Components.Layout.NavBarVerticalDashboard lstFoldersAndPages="lstFoldersAndPages"></Mercadito.Ali.Components.Layout.NavBarVerticalDashboard>
+<MercaditoAli.Components.Layout.NavBarVerticalDashboard lstFoldersAndPages="lstFoldersAndPages"></MercaditoAli.Components.Layout.NavBarVerticalDashboard>
 
 <div class="main-content position-relative max-height-vh-100 h-100">
-    <Mercadito.Ali.Components.Layout.NavBarHorizontalDashboard></Mercadito.Ali.Components.Layout.NavBarHorizontalDashboard>
+    <MercaditoAli.Components.Layout.NavBarHorizontalDashboard></MercaditoAli.Components.Layout.NavBarHorizontalDashboard>
     <div class="container-fluid px-2 px-md-4">
         <div class="page-header min-height-300 border-radius-xl mt-4"
              style="background-image: url('assets/img/illustrations/Landscape2.jpg');">
@@ -276,7 +276,7 @@
             </div>
         </div>
     </div>
-    <Mercadito.Ali.Components.Layout.FooterDashboard></Mercadito.Ali.Components.Layout.FooterDashboard>
+    <MercaditoAli.Components.Layout.FooterDashboard></MercaditoAli.Components.Layout.FooterDashboard>
 </div>
 
 @code {
@@ -723,7 +723,7 @@
         {
             //Set initial state
             ErrorMessage = "";
-            string ProjectName = "Mercadito.Ali";
+            string ProjectName = "MercaditoAli";
             string Table = "Failure";
             var Renderer = new HtmlToPdf();
             string RowsAsHTML = "";

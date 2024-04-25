@@ -1,4 +1,4 @@
-﻿namespace Mercadito.Ali.Areas.BasicCore.DTOs
+﻿namespace MercaditoAli.Areas.BasicCore.DTOs
 {
     public class itemForFolderForDashboard
     {

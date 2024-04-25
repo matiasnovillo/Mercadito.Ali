@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Mercadito.Ali.Library
+namespace MercaditoAli.Library
 {
     public static class Math
     {

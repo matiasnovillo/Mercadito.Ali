@@ -1,4 +1,4 @@
-﻿namespace Mercadito.Ali.Library
+﻿namespace MercaditoAli.Library
 {
     public class Ajax
     {

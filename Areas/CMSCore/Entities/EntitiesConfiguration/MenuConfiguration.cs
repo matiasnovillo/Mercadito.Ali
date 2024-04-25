@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
  * 
  */
 
-namespace Mercadito.Ali.Areas.CMSCore.Entities.EntitiesConfiguration
+namespace MercaditoAli.Areas.CMSCore.Entities.EntitiesConfiguration
 {
     public class MenuConfiguration : IEntityTypeConfiguration<Menu>
     {

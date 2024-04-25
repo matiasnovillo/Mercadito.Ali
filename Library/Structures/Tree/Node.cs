@@ -1,4 +1,4 @@
-﻿namespace Mercadito.Ali.Library.Structures.Tree
+﻿namespace MercaditoAli.Library.Structures.Tree
 {
     public class Node
     {

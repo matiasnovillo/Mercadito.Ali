@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Mercadito.Ali.Library
+namespace MercaditoAli.Library
 {
     public static class Security
     {

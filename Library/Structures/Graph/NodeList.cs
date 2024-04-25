@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace Mercadito.Ali.Library.Structures.Graph
+namespace MercaditoAli.Library.Structures.Graph
 {
     public class NodeList
     {

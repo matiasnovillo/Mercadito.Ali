@@ -1,6 +1,6 @@
-﻿using Mercadito.Ali.Areas.CMSCore.Entities;
+﻿using MercaditoAli.Areas.CMSCore.Entities;
 
-namespace Mercadito.Ali.Components.Shared
+namespace MercaditoAli.Components.Shared
 {
     public class StateContainer
     {

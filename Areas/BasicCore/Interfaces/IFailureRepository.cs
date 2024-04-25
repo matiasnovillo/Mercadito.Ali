@@ -1,5 +1,5 @@
-using Mercadito.Ali.Areas.BasicCore.Entities;
-using Mercadito.Ali.Areas.BasicCore.DTOs;
+using MercaditoAli.Areas.BasicCore.Entities;
+using MercaditoAli.Areas.BasicCore.DTOs;
 using System.Data;
 
 /*
@@ -13,7 +13,7 @@ using System.Data;
  * 
  */
 
-namespace Mercadito.Ali.Areas.BasicCore.Interfaces
+namespace MercaditoAli.Areas.BasicCore.Interfaces
 {
     public interface IFailureRepository
     {

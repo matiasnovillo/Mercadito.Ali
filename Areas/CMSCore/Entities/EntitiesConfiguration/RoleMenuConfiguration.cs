@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
-namespace Mercadito.Ali.Areas.CMSCore.Entities.EntitiesConfiguration
+namespace MercaditoAli.Areas.CMSCore.Entities.EntitiesConfiguration
 {
     public class RoleMenuConfiguration : IEntityTypeConfiguration<RoleMenu>
     {

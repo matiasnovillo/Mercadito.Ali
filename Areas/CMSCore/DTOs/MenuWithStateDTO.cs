@@ -1,6 +1,6 @@
-﻿using Mercadito.Ali.Areas.CMSCore.Entities;
+﻿using MercaditoAli.Areas.CMSCore.Entities;
 
-namespace Mercadito.Ali.Areas.CMSCore.DTOs
+namespace MercaditoAli.Areas.CMSCore.DTOs
 {
     public class MenuWithStateDTO : Menu
     {

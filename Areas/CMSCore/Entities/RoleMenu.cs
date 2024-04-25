@@ -1,4 +1,4 @@
-﻿namespace Mercadito.Ali.Areas.CMSCore.Entities
+﻿namespace MercaditoAli.Areas.CMSCore.Entities
 {
     public class RoleMenu
     {

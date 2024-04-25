@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
  * 
  */
 
-namespace Mercadito.Ali.Areas.BasicCore.Entities.EntitiesConfiguration
+namespace MercaditoAli.Areas.BasicCore.Entities.EntitiesConfiguration
 {
     public class FailureConfiguration : IEntityTypeConfiguration<Failure>
     {

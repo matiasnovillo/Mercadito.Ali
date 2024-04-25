@@ -4,7 +4,7 @@ using System;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 
-namespace Mercadito.Ali.Library
+namespace MercaditoAli.Library
 {
     public static class Converter
     {

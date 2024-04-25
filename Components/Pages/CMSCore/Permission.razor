@@ -1,8 +1,8 @@
 ﻿@page "/CMSCore/Permission"
-@using Mercadito.Ali.Areas.CMSCore.Entities;
-@using Mercadito.Ali.Areas.CMSCore.Repositories;
-@using Mercadito.Ali.Components.Shared;
-@using Mercadito.Ali.Areas.CMSCore.DTOs;
+@using MercaditoAli.Areas.CMSCore.Entities;
+@using MercaditoAli.Areas.CMSCore.Repositories;
+@using MercaditoAli.Components.Shared;
+@using MercaditoAli.Areas.CMSCore.DTOs;
 @inject UserRepository userRepository;
 @inject RoleRepository roleRepository;
 @inject MenuRepository menuRepository;
@@ -10,12 +10,12 @@
 @inject StateContainer StateContainer;
 @inject NavigationManager NavigationManager;
 
-<PageTitle>Permisos - Mercadito.Ali</PageTitle>
+<PageTitle>Permisos - MercaditoAli</PageTitle>
 
-<Mercadito.Ali.Components.Layout.NavBarVerticalDashboard lstFoldersAndPages="lstFoldersAndPages"></Mercadito.Ali.Components.Layout.NavBarVerticalDashboard>
+<MercaditoAli.Components.Layout.NavBarVerticalDashboard lstFoldersAndPages="lstFoldersAndPages"></MercaditoAli.Components.Layout.NavBarVerticalDashboard>
 
 <div class="main-content position-relative max-height-vh-100 h-100">
-    <Mercadito.Ali.Components.Layout.NavBarHorizontalDashboard></Mercadito.Ali.Components.Layout.NavBarHorizontalDashboard>
+    <MercaditoAli.Components.Layout.NavBarHorizontalDashboard></MercaditoAli.Components.Layout.NavBarHorizontalDashboard>
     <div class="container-fluid px-2 px-md-4">
         <div class="page-header min-height-300 border-radius-xl mt-4"
              style="background-image: url('assets/img/illustrations/Landscape2.jpg');">
@@ -99,12 +99,12 @@
             </div>
         </div>
     </div>
-    <Mercadito.Ali.Components.Layout.FooterDashboard></Mercadito.Ali.Components.Layout.FooterDashboard>
+    <MercaditoAli.Components.Layout.FooterDashboard></MercaditoAli.Components.Layout.FooterDashboard>
 </div>
 
 @code{
     #region Properties
-    public Mercadito.Ali.Areas.CMSCore.Entities.User User { get; set; } = new();
+    public MercaditoAli.Areas.CMSCore.Entities.User User { get; set; } = new();
 
     public bool Toggle { get; set; } = false;
 

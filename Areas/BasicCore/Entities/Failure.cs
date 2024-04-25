@@ -11,7 +11,7 @@
  * 
  */
 
-namespace Mercadito.Ali.Areas.BasicCore.Entities
+namespace MercaditoAli.Areas.BasicCore.Entities
 {
     public class Failure
     {

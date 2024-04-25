@@ -1,18 +1,18 @@
 ﻿@page "/Login"
 
-@using Mercadito.Ali.Areas.CMSCore.Entities;
-@using Mercadito.Ali.Areas.CMSCore.Repositories;
-@using Mercadito.Ali.Components.Shared;
+@using MercaditoAli.Areas.CMSCore.Entities;
+@using MercaditoAli.Areas.CMSCore.Repositories;
+@using MercaditoAli.Components.Shared;
 @inject UserRepository userRepository;
 @inject StateContainer StateContainer;
 @inject NavigationManager NavigationManager;
 
-<PageTitle>Login - Mercadito.Ali</PageTitle>
+<PageTitle>Login - MercaditoAli</PageTitle>
 
 <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
         <div class="col-12">
-            <Mercadito.Ali.Components.Layout.NavBarHorizontalHome></Mercadito.Ali.Components.Layout.NavBarHorizontalHome>
+            <MercaditoAli.Components.Layout.NavBarHorizontalHome></MercaditoAli.Components.Layout.NavBarHorizontalHome>
         </div>
     </div>
 </div>
@@ -100,7 +100,7 @@ loading="lazy">
     </div>
 </div>
 
-<Mercadito.Ali.Components.Layout.FooterHome></Mercadito.Ali.Components.Layout.FooterHome>
+<MercaditoAli.Components.Layout.FooterHome></MercaditoAli.Components.Layout.FooterHome>
 
 @code {
     #region Properties
@@ -132,7 +132,7 @@ loading="lazy">
         try
         {
             //Encrypt password
-            string EncryptedPassword = Mercadito.Ali.Library.Security
+            string EncryptedPassword = MercaditoAli.Library.Security
                                             .EncodeString(User.Password);
 
             //Get user by email and password

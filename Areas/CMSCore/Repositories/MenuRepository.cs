@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
-using Mercadito.Ali.Areas.CMSCore.Entities;
-using Mercadito.Ali.Areas.CMSCore.DTOs;
-using Mercadito.Ali.Areas.CMSCore.Interfaces;
+using MercaditoAli.Areas.CMSCore.Entities;
+using MercaditoAli.Areas.CMSCore.DTOs;
+using MercaditoAli.Areas.CMSCore.Interfaces;
 using System.Data;
-using Mercadito.Ali.Areas.BasicCore;
+using MercaditoAli.Areas.BasicCore;
 
 /*
  * GUID:e6c09dfe-3a3e-461b-b3f9-734aee05fc7b
@@ -17,7 +17,7 @@ using Mercadito.Ali.Areas.BasicCore;
  * 
  */
 
-namespace Mercadito.Ali.Areas.CMSCore.Repositories
+namespace MercaditoAli.Areas.CMSCore.Repositories
 {
     public class MenuRepository : IMenuRepository
     {

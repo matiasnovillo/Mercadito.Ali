@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Mercadito.Ali.Library
+namespace MercaditoAli.Library
 {
     public static class Constant
     {

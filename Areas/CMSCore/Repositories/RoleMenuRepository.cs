@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
-using Mercadito.Ali.Areas.CMSCore.DTOs;
-using Mercadito.Ali.Areas.CMSCore.Entities;
-using Mercadito.Ali.Areas.BasicCore;
-using Mercadito.Ali.Areas.BasicCore.DTOs;
+using MercaditoAli.Areas.CMSCore.DTOs;
+using MercaditoAli.Areas.CMSCore.Entities;
+using MercaditoAli.Areas.BasicCore;
+using MercaditoAli.Areas.BasicCore.DTOs;
 
-namespace Mercadito.Ali.Areas.CMSCore.Repositories
+namespace MercaditoAli.Areas.CMSCore.Repositories
 {
     public class RoleMenuRepository
     {

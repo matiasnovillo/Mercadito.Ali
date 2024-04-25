@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mercadito.Ali.Library.Structures.Graph
+namespace MercaditoAli.Library.Structures.Graph
 {
     public static class Utilities
     {

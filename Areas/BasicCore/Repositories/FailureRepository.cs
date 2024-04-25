@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
-using Mercadito.Ali.Areas.BasicCore.Entities;
-using Mercadito.Ali.Areas.BasicCore.DTOs;
-using Mercadito.Ali.Areas.BasicCore.Interfaces;
+using MercaditoAli.Areas.BasicCore.Entities;
+using MercaditoAli.Areas.BasicCore.DTOs;
+using MercaditoAli.Areas.BasicCore.Interfaces;
 using System.Data;
-using Mercadito.Ali.Areas.CMSCore.Entities;
+using MercaditoAli.Areas.CMSCore.Entities;
 
 /*
  * GUID:e6c09dfe-3a3e-461b-b3f9-734aee05fc7b
@@ -17,7 +17,7 @@ using Mercadito.Ali.Areas.CMSCore.Entities;
  * 
  */
 
-namespace Mercadito.Ali.Areas.BasicCore.Repositories
+namespace MercaditoAli.Areas.BasicCore.Repositories
 {
     public class FailureRepository : IFailureRepository
     {

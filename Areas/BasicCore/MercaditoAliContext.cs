@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Mercadito.Ali.Areas.CMSCore.Entities;
-using Mercadito.Ali.Areas.CMSCore.Entities.EntitiesConfiguration;
-using Mercadito.Ali.Areas.BasicCore.Entities.EntitiesConfiguration;
-using Mercadito.Ali.Areas.BasicCore.Entities;
+using MercaditoAli.Areas.CMSCore.Entities;
+using MercaditoAli.Areas.CMSCore.Entities.EntitiesConfiguration;
+using MercaditoAli.Areas.BasicCore.Entities.EntitiesConfiguration;
+using MercaditoAli.Areas.BasicCore.Entities;
 
-namespace Mercadito.Ali.Areas.BasicCore
+namespace MercaditoAli.Areas.BasicCore
 {
     public class MercaditoAliContext : DbContext
     {
@@ -17,7 +17,7 @@ namespace Mercadito.Ali.Areas.BasicCore
         public DbSet<Failure> Failure { get; set; }
         public DbSet<Parameter> Parameter { get; set; }
 
-        //Mercadito.Ali
+        //MercaditoAli
 
         public MercaditoAliContext(IConfiguration configuration)
         {
@@ -31,7 +31,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                 string ConnectionString = "";
 #if DEBUG
                 ConnectionString = "data source =.; " +
-                    "initial catalog = Mercadito.Ali; " +
+                    "initial catalog = MercaditoAli; " +
                     "Integrated Security = SSPI;" +
                     " MultipleActiveResultSets=True;" +
                     "Pooling=false;" +
@@ -64,7 +64,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                 modelBuilder.ApplyConfiguration(new FailureConfiguration());
                 modelBuilder.ApplyConfiguration(new ParameterConfiguration());
 
-                //Mercadito.Ali
+                //MercaditoAli
 
                 #region User
                 modelBuilder.Entity<User>().HasData(new User
@@ -393,7 +393,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                 modelBuilder.Entity<Menu>().HasData(new Menu
                 {
                     MenuId = 15,
-                    Name = "Mercadito.Ali",
+                    Name = "MercaditoAli",
                     MenuFatherId = 0,
                     Order = 0,
                     URLPath = "",
@@ -411,7 +411,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                     Name = "BlogPost",
                     MenuFatherId = 15,
                     Order = 0,
-                    URLPath = "/Mercadito.Ali/BlogPostPage",
+                    URLPath = "/MercaditoAli/BlogPostPage",
                     IconURLPath = "",
                     Active = true,
                     DateTimeCreation = DateTime.Now,
@@ -426,7 +426,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                     Name = "Perfil",
                     MenuFatherId = 15,
                     Order = 0,
-                    URLPath = "/Mercadito.Ali/UserProfilePage",
+                    URLPath = "/MercaditoAli/UserProfilePage",
                     IconURLPath = "",
                     Active = true,
                     DateTimeCreation = DateTime.Now,
@@ -441,7 +441,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                     Name = "Agenda",
                     MenuFatherId = 15,
                     Order = 0,
-                    URLPath = "/Mercadito.Ali/AgendaPage",
+                    URLPath = "/MercaditoAli/AgendaPage",
                     IconURLPath = "",
                     Active = true,
                     DateTimeCreation = DateTime.Now,
@@ -456,7 +456,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                     Name = "CarouselTemasDeInteres",
                     MenuFatherId = 15,
                     Order = 0,
-                    URLPath = "/Mercadito.Ali/CarouselTemasDeInteresPage",
+                    URLPath = "/MercaditoAli/CarouselTemasDeInteresPage",
                     IconURLPath = "",
                     Active = true,
                     DateTimeCreation = DateTime.Now,
@@ -471,7 +471,7 @@ namespace Mercadito.Ali.Areas.BasicCore
                     Name = "MarketplaceServices",
                     MenuFatherId = 15,
                     Order = 0,
-                    URLPath = "/Mercadito.Ali/MarketplacePostServicePage",
+                    URLPath = "/MercaditoAli/MarketplacePostServicePage",
                     IconURLPath = "",
                     Active = true,
                     DateTimeCreation = DateTime.Now,

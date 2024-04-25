@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
-using Mercadito.Ali.Areas.BasicCore.Entities;
-using Mercadito.Ali.Areas.BasicCore.DTOs;
-using Mercadito.Ali.Areas.BasicCore.Interfaces;
+using MercaditoAli.Areas.BasicCore.Entities;
+using MercaditoAli.Areas.BasicCore.DTOs;
+using MercaditoAli.Areas.BasicCore.Interfaces;
 using System.Data;
 using DocumentFormat.OpenXml.Spreadsheet;
-using Mercadito.Ali.Areas.CMSCore.Entities;
-using Parameter = Mercadito.Ali.Areas.BasicCore.Entities.Parameter;
+using MercaditoAli.Areas.CMSCore.Entities;
+using Parameter = MercaditoAli.Areas.BasicCore.Entities.Parameter;
 
 /*
  * GUID:e6c09dfe-3a3e-461b-b3f9-734aee05fc7b
@@ -19,7 +19,7 @@ using Parameter = Mercadito.Ali.Areas.BasicCore.Entities.Parameter;
  * 
  */
 
-namespace Mercadito.Ali.Areas.BasicCore.Repositories
+namespace MercaditoAli.Areas.BasicCore.Repositories
 {
     public class ParameterRepository : IParameterRepository
     {

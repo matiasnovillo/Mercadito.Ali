@@ -1,5 +1,5 @@
-using Mercadito.Ali.Areas.CMSCore.Entities;
-using Mercadito.Ali.Areas.CMSCore.DTOs;
+using MercaditoAli.Areas.CMSCore.Entities;
+using MercaditoAli.Areas.CMSCore.DTOs;
 using System.Data;
 
 /*
@@ -13,7 +13,7 @@ using System.Data;
  * 
  */
 
-namespace Mercadito.Ali.Areas.CMSCore.Interfaces
+namespace MercaditoAli.Areas.CMSCore.Interfaces
 {
     public interface IUserRepository
     {

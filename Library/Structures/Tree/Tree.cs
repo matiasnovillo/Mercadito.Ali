@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using static Mercadito.Ali.Library.Structures.Tree.Utilities;
+using static MercaditoAli.Library.Structures.Tree.Utilities;
 
-namespace Mercadito.Ali.Library.Structures.Tree
+namespace MercaditoAli.Library.Structures.Tree
 {
     public class Tree
     {

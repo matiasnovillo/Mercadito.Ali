@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Mercadito.Ali.Library.ModelAttributeValidator
+namespace MercaditoAli.Library.ModelAttributeValidator
 {
     public class RequiredAttribute : ValidationAttribute
     {
